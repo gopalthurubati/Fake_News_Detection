@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Fake News Detector</title>
+    <style>
+        body {
+            background-color: #e9ecef; /* Light background */
+            color: #343a40; /* Dark text for contrast */
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            color: #007bff; /* Primary color for headers */
+            font-weight: bold;
+        }
+
+        p.lead {
+            color: #6c757d; /* Secondary color for description */
+        }
+
+        .form-control {
+            background-color: #ffffff; /* White input background */
+            border: 1px solid #ced4da; /* Light border for inputs */
+            color: #495057; /* Dark text for inputs */
+            border-radius: 0.25rem; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+        }
+
+        .form-control::placeholder {
+            color: #adb5bd; /* Placeholder text color */
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Primary button color */
+            border-color: #007bff; /* Primary border color */
+            transition: background-color 0.3s ease; /* Transition for hover effect */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            border-color: #0056b3; /* Darker border on hover */
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #6c757d; /* Lighter footer text */
+        }
+
+        .container {
+            margin-top: 50px; /* Space at the top */
+            padding: 30px; /* Increased padding */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #ffffff; /* Container background color */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        }
+
+        @media (max-width: 576px) {
+            body {
+                padding: 10px; /* Mobile padding */
+            }
+
+            .container {
+                padding: 20px; /* Mobile container padding */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center mb-4">
+            <h1>Fake News Prediction</h1>
+            <p class="lead">Enter the news article text below to check its authenticity.</p>
+        </header>
+
+        <form method="POST" action="/prediction">
+            <div class="form-group">
+                <textarea class="form-control" name="input_data" rows="10" placeholder="Paste the news article text here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Check News</button>
+        </form>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Fake News Detector</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

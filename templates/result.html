@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef; /* Light background */
+            color: #343a40; /* Dark text */
+            text-align: center;
+        }
+
+        .container {
+            margin: 50px auto;
+            width: 50%;
+            padding: 30px; /* Increased padding */
+            background-color: #ffffff; /* White background for the container */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        }
+
+        h1 {
+            color: #007bff; /* Primary color for the header */
+            font-weight: bold;
+        }
+
+        .result {
+            font-size: 24px;
+            margin: 20px 0;
+            font-weight: 500; /* Medium weight for results */
+        }
+
+        .back-btn {
+            background-color: #007bff; /* Primary button color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease; /* Transition for hover effect */
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                width: 90%; /* Adjust width for mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Fake News Detection Result</h1>
+        <div class="result">
+            <p>The news is <strong>{{ prediction }}</strong></p>
+        </div>
+        <a href="/news_prediction" class="back-btn">Check Another News</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
