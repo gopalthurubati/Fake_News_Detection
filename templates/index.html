@@ -80,14 +80,21 @@
 
         <form method="POST" action="/prediction">
             <div class="form-group">
-                <textarea class="form-control" name="input_data" rows="10" placeholder="Paste the news article text here..." required></textarea>
+                <textarea class="form-control" name="news_text" rows="10" placeholder="Paste the news article text here..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="model">Choose Model</label>
+                <select class="form-control" id="model" name="model">
+                    <option value="logistic">Logistic Regression</option>
+                    <option value="svm">SVM</option>
+                </select>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Check News</button>
         </form>
     </div>
 
     <footer class="text-center mt-5">
-        <p>&copy; 2024 Fake News Detector</p>
+        <p>&copy; 2024 Gopal Fake News Detector</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -96,3 +103,4 @@
 </body>
 
 </html>
+
